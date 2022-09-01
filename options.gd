@@ -23,3 +23,8 @@ func _on_fullscreen_toggled(on):
 		OS.window_fullscreen = true
 	else:
 			OS.window_fullscreen = false
+
+
+func _process(delta):
+	if Input.is_action_just_released("pause"):
+		visible = false
