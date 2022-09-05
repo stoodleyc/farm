@@ -3,7 +3,7 @@ extends Control
 
 
 func _on_continue_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://farm.tscn");
 
 
 

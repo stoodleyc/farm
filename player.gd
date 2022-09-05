@@ -31,4 +31,6 @@ func _physics_process(delta):
 		velocity.x = 0
 	
 	
+	
+	
 	move_and_collide(velocity)
