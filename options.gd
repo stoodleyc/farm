@@ -2,13 +2,6 @@ extends PopupPanel
 
 
 
-func _ready():
-	pass # Replace with function body.
-
-
-
-
-
 #open and close menu
 func _on_options_pressed():
 	visible = true

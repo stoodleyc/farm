@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://main menu.gd" type="Script" id=1]
+[ext_resource path="res://load.tscn" type="PackedScene" id=2]
 [ext_resource path="res://options.tscn" type="PackedScene" id=3]
+[ext_resource path="res://new game.tscn" type="PackedScene" id=4]
 
 [node name="menu" type="Control"]
 anchor_right = 1.0
@@ -70,8 +72,16 @@ text = "quit"
 
 [node name="options" parent="." instance=ExtResource( 3 )]
 
+[node name="load" parent="." instance=ExtResource( 2 )]
+
+[node name="new game" parent="." instance=ExtResource( 4 )]
+margin_left = -79.0
+margin_top = -65.0
+margin_right = 89.0
+margin_bottom = 141.0
+
 [connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="VBoxContainer/new game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="VBoxContainer/load game" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/new game" to="new game" method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/load game" to="load" method="_on_load_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="options" method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
