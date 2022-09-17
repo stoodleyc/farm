@@ -12,7 +12,7 @@ func _on_quit_without_saving_pressed():
 
 
 func _on_quit_pressed():
-	get.tree().paused = false
+	get_tree().paused = false
 	get_tree().change_scene("res://main menu.tscn");
 
 

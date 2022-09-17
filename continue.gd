@@ -1,5 +1,4 @@
-extends Control
-
+extends PopupPanel
 
 
 func _on_continue_pressed():
@@ -14,15 +13,10 @@ func _on_continue_pressed():
 	elif SaveFiles.current == "user://save_5.save":
 		get_tree().change_scene("res://farm.tscn");
 	else:
-		print("oh fuck")
+		get_tree().paused = true
+		visible = true
 
 
-
-
-func _on_quit_pressed():
-	get_tree().quit()
-
-
-
-func _on_Button_pressed():
-	print(SaveFiles.current)
+func _on_close_pressed():
+		get_tree().paused = false
+		visible = false

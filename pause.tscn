@@ -26,43 +26,43 @@ margin_right = 115.5
 margin_bottom = 113.5
 
 [node name="title" type="Label" parent="pause vbox"]
-margin_right = 223.0
+margin_right = 231.0
 margin_bottom = 14.0
 text = "PAUSED"
 
 [node name="resume" type="Button" parent="pause vbox"]
 margin_top = 18.0
-margin_right = 223.0
+margin_right = 231.0
 margin_bottom = 38.0
 text = "resume"
 
 [node name="save" type="Button" parent="pause vbox"]
 margin_top = 42.0
-margin_right = 223.0
+margin_right = 231.0
 margin_bottom = 62.0
 text = "save"
 
 [node name="load" type="Button" parent="pause vbox"]
 margin_top = 66.0
-margin_right = 223.0
+margin_right = 231.0
 margin_bottom = 86.0
 text = "load"
 
 [node name="options" type="Button" parent="pause vbox"]
 margin_top = 90.0
-margin_right = 223.0
+margin_right = 231.0
 margin_bottom = 110.0
 text = "options"
 
 [node name="save and quit" type="Button" parent="pause vbox"]
 margin_top = 114.0
-margin_right = 223.0
+margin_right = 231.0
 margin_bottom = 134.0
 text = "save and quit"
 
 [node name="quit without saving" type="Button" parent="pause vbox"]
 margin_top = 138.0
-margin_right = 223.0
+margin_right = 231.0
 margin_bottom = 158.0
 text = "quit without saving"
 
@@ -95,14 +95,14 @@ margin_right = 111.5
 margin_bottom = 109.5
 
 [node name="Label" type="Label" parent="Quit\?/quit\? vbox"]
-margin_right = 221.0
+margin_right = 223.0
 margin_bottom = 31.0
 text = "WARNING:
 UNSAVED PROGRESS WILL BE LOST"
 
 [node name="quit\? hbox" type="HBoxContainer" parent="Quit\?/quit\? vbox"]
 margin_top = 35.0
-margin_right = 221.0
+margin_right = 223.0
 margin_bottom = 55.0
 
 [node name="quit" type="Button" parent="Quit\?/quit\? vbox/quit\? hbox"]
