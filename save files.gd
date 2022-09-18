@@ -2,10 +2,12 @@ extends Node
 
 var current
 
+var enter = true
 
 const save_continue = "user://continue.save"
 
-var game_data = {}
+var game_data = {
+}
 
 
 func _ready():
@@ -37,8 +39,7 @@ func load_data():
 
 
 
-
-#for continue button
+#for continue button only
 func save_current():
 	var file = File.new()
 	file.open(save_continue,File.WRITE)

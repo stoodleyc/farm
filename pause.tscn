@@ -5,6 +5,7 @@
 [ext_resource path="res://Quit.gd" type="Script" id=3]
 
 [node name="pause" type="PopupPanel"]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -106,6 +107,7 @@ margin_right = 223.0
 margin_bottom = 55.0
 
 [node name="quit" type="Button" parent="Quit\?/quit\? vbox/quit\? hbox"]
+modulate = Color( 1, 0, 0, 1 )
 margin_right = 45.0
 margin_bottom = 20.0
 text = "QUIT"

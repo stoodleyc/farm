@@ -105,9 +105,10 @@ margin_right = 71.5
 margin_bottom = 50.5
 
 [node name="error" type="Label" parent="continue/VBoxContainer"]
+modulate = Color( 1, 0.890196, 0, 1 )
 margin_right = 143.0
 margin_bottom = 14.0
-text = "          oh shit."
+text = "          load failed"
 
 [node name="spacing" type="Label" parent="continue/VBoxContainer"]
 margin_top = 18.0
@@ -117,14 +118,15 @@ margin_bottom = 32.0
 [node name="explanation" type="Label" parent="continue/VBoxContainer"]
 margin_top = 36.0
 margin_right = 143.0
-margin_bottom = 50.0
-text = "       we fucked up"
+margin_bottom = 67.0
+text = "     no primary save
+	      was detected"
 
 [node name="close" type="Button" parent="continue/VBoxContainer"]
-margin_top = 54.0
+margin_top = 71.0
 margin_right = 143.0
-margin_bottom = 74.0
-text = "damn."
+margin_bottom = 91.0
+text = "ok"
 
 [node name="Button" type="Button" parent="."]
 margin_right = 12.0
