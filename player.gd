@@ -1,10 +1,16 @@
 extends KinematicBody2D
 
+onready var hello = $talk/Label
+onready var game_data = SaveFiles.game_data
+
 
 #variables for movement
 var velocity = Vector2.ZERO
 export (int) var walk = 2.5
 
+
+func _ready():
+	hello.text = "hello my name is %s." %[game_data.player_name]
 
 
 func _physics_process(delta):
@@ -31,6 +37,16 @@ func _physics_process(delta):
 		velocity.x = 0
 	
 	
+	#talk
+		if Input.is_action_pressed("ui_accept"):
+			$talk.visible = true
+			var t = Timer.new()
+			t.set_wait_time(3)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			yield(t, "timeout")
+			$talk.visible = false
 	
 	
 	move_and_collide(velocity)

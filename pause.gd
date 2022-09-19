@@ -18,3 +18,7 @@ func _on_resume_pressed():
 
 
 
+
+
+func _on_save_pressed():
+	SaveFiles.save_data()

@@ -12,6 +12,7 @@ var game_data = {
 
 func _ready():
 	load_current()
+	SaveFiles.load_data()
 
 
 #save game
@@ -26,8 +27,8 @@ func load_data():
 	if not file.file_exists(current):
 		game_data = {
 			"player_name": "farmer",
-			"player_x": 100,
-			"player_y": 100,
+			"playerx": 100,
+			"playery": 100,
 		}
 		save_data()
 	file.open(current, File.READ)
