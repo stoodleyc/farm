@@ -5,7 +5,6 @@
 [ext_resource path="res://Quit.gd" type="Script" id=3]
 
 [node name="pause" type="PopupPanel"]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -68,6 +67,7 @@ margin_bottom = 158.0
 text = "quit without saving"
 
 [node name="options" parent="." instance=ExtResource( 2 )]
+visible = true
 margin_left = -115.5
 margin_top = -113.5
 margin_right = 115.5

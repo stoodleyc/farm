@@ -93,3 +93,9 @@ __meta__ = {
 
 [node name="pause" parent="." instance=ExtResource( 3 )]
 pause_mode = 2
+
+[node name="Label" type="Label" parent="."]
+margin_left = 493.0
+margin_top = 244.0
+margin_right = 533.0
+margin_bottom = 258.0
