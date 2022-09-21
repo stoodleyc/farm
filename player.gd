@@ -19,6 +19,12 @@ func _on_save_pressed():
 	SaveFiles.game_data.playery = self.position.y
 	SaveFiles.save_data()
 
+func _on_save_and_quit_pressed():
+	SaveFiles.game_data.playerx = self.position.x
+	SaveFiles.game_data.playery = self.position.y
+	SaveFiles.save_data()
+	get_tree().paused = false
+	get_tree().change_scene("res://main menu.tscn");
 
 
 
@@ -50,7 +56,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("ui_accept"):
 			$talk.visible = true
 			var t = Timer.new()
-			t.set_wait_time(3)
+			t.set_wait_time(2)
 			t.set_one_shot(true)
 			self.add_child(t)
 			t.start()

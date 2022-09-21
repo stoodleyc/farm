@@ -6,13 +6,14 @@ var enter
 
 const save_continue = "user://continue.save"
 
+
 var game_data = {
 }
 
 
 func _ready():
 	load_current()
-	load_data()
+
 
 
 #save game
@@ -56,4 +57,5 @@ func load_current():
 	file.open(save_continue, File.READ)
 	current = file.get_var()
 	file.close()
+
 

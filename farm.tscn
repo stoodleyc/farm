@@ -95,5 +95,6 @@ __meta__ = {
 pause_mode = 2
 
 [connection signal="pressed" from="pause/pause vbox/save" to="player" method="_on_save_pressed"]
+[connection signal="pressed" from="pause/pause vbox/save and quit" to="player" method="_on_save_and_quit_pressed"]
 
 [editable path="pause"]
