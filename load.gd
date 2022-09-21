@@ -1,6 +1,10 @@
 extends PopupPanel
 
+onready var names = SaveFiles.names
 
+func _ready():
+	SaveFiles.load_names()
+	$"VBoxContainer/save 1".text = names.user://save_1.save
 
 func _on_load_game_pressed():
 	visible = true

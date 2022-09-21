@@ -4,12 +4,15 @@ var current
 
 var enter
 
+const nameplace = "user://names.save"
 const save_continue = "user://continue.save"
 
 
 var game_data = {
 }
 
+var names = {
+}
 
 func _ready():
 	load_current()
@@ -59,3 +62,24 @@ func load_current():
 	file.close()
 
 
+#for load names
+func save_names():
+	var file = File.new()
+	file.open(nameplace,File.WRITE)
+	file.store_var(names)
+	file.close()
+
+func load_names():
+	var file = File.new()
+	if not file.file_exists(nameplace):
+		names = {
+			"user://save_1.save" : "slot 1",
+			"user://save_2.save" : "slot 2",
+			"user://save_3.save" : "slot 3",
+			"user://save_4.save" : "slot 4",
+			"user://save_5.save" : "slot 5",
+		}
+		save_data()
+	file.open(nameplace, File.READ)
+	current = file.get_var()
+	file.close()

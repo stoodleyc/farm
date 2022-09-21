@@ -1,16 +1,8 @@
 extends Control
 
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+onready var names = SaveFiles.names
+onready var current = SaveFiles.current
 
 func _on_done_pressed():
 	SaveFiles.save_current()
@@ -21,4 +13,7 @@ func _on_done_pressed():
 		"area": "farm",
 	}
 	SaveFiles.save_data()
+	SaveFiles.load_names()
+	names.current = $TextEdit.text
+	SaveFiles.save_names()
 	get_tree().change_scene("res://farm.tscn");
