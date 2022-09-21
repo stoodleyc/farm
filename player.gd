@@ -13,6 +13,16 @@ func _ready():
 	hello.text = "hello my name is %s." %[game_data.player_name]
 
 
+
+func _on_save_pressed():
+	SaveFiles.game_data.playerx = self.position.x
+	SaveFiles.game_data.playery = self.position.y
+	SaveFiles.save_data()
+
+
+
+
+
 func _physics_process(delta):
 	
 	#vertical movement
@@ -35,7 +45,6 @@ func _physics_process(delta):
 		velocity.x = walk
 	else:
 		velocity.x = 0
-	
 	
 	#talk
 		if Input.is_action_pressed("ui_accept"):

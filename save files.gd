@@ -2,7 +2,7 @@ extends Node
 
 var current
 
-var enter = true
+var enter
 
 const save_continue = "user://continue.save"
 
@@ -12,7 +12,7 @@ var game_data = {
 
 func _ready():
 	load_current()
-	SaveFiles.load_data()
+	load_data()
 
 
 #save game
@@ -29,6 +29,7 @@ func load_data():
 			"player_name": "farmer",
 			"playerx": 100,
 			"playery": 100,
+			"area": "farm",
 		}
 		save_data()
 	file.open(current, File.READ)
@@ -55,3 +56,4 @@ func load_current():
 	file.open(save_continue, File.READ)
 	current = file.get_var()
 	file.close()
+

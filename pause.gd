@@ -15,10 +15,3 @@ func _on_resume_pressed():
 	visible = false
 
 
-
-
-
-
-
-func _on_save_pressed():
-	SaveFiles.save_data()

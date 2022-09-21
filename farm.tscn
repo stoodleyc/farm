@@ -93,3 +93,7 @@ __meta__ = {
 
 [node name="pause" parent="." instance=ExtResource( 3 )]
 pause_mode = 2
+
+[connection signal="pressed" from="pause/pause vbox/save" to="player" method="_on_save_pressed"]
+
+[editable path="pause"]
