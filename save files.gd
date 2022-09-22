@@ -1,6 +1,6 @@
 extends Node
 
-var current = "user://throwaway.save"
+var current
 
 var enter
 
@@ -56,7 +56,7 @@ func save_current():
 func load_current():
 	var file = File.new()
 	if not file.file_exists(save_continue):
-		current = "user://throwaway.save"
+		current = "0"
 		save_data()
 	file.open(save_continue, File.READ)
 	current = file.get_var()
