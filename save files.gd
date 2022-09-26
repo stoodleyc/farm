@@ -1,6 +1,6 @@
 extends Node
 
-var current
+var current = "0"
 
 var enter
 
@@ -12,11 +12,15 @@ var game_data = {
 }
 
 var names = {
+	"1" : "slot 1",
+	"2" : "slot 2",
+	"3" : "slot 3",
+	"4" : "slot 4",
+	"5" : "slot 5",
 }
 
 func _ready():
 	load_current()
-
 
 
 
@@ -45,7 +49,6 @@ func load_data():
 
 
 
-
 #for continue button only
 func save_current():
 	var file = File.new()
@@ -57,7 +60,7 @@ func load_current():
 	var file = File.new()
 	if not file.file_exists(save_continue):
 		current = "0"
-		save_data()
+		save_current()
 	file.open(save_continue, File.READ)
 	current = file.get_var()
 	file.close()
@@ -74,13 +77,13 @@ func load_names():
 	var file = File.new()
 	if not file.file_exists(nameplace):
 		names = {
-			"user://save_1.save" : "slot 1",
-			"user://save_2.save" : "slot 2",
-			"user://save_3.save" : "slot 3",
-			"user://save_4.save" : "slot 4",
-			"user://save_5.save" : "slot 5",
+			"1" : "slot 1",
+			"2" : "slot 2",
+			"3" : "slot 3",
+			"4" : "slot 4",
+			"5" : "slot 5",
 		}
-		save_data()
+		save_names()
 	file.open(nameplace, File.READ)
 	current = file.get_var()
 	file.close()
