@@ -30,6 +30,7 @@ func _on_save_and_quit_pressed():
 
 
 func _physics_process(delta):
+	#for debuging remember to delete
 	print(SaveFiles.names)
 	
 	#vertical movement

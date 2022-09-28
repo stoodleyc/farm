@@ -3,6 +3,7 @@
 [ext_resource path="res://load.gd" type="Script" id=1]
 
 [node name="load" type="PopupPanel"]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -76,9 +77,47 @@ margin_right = 160.0
 margin_bottom = 140.0
 text = "5"
 
+[node name="empty slot" type="PopupPanel" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.5
+margin_top = -49.0
+margin_right = 107.5
+margin_bottom = 49.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="empty slot"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 211.0
+margin_bottom = 94.0
+
+[node name="error" type="Label" parent="empty slot/VBoxContainer"]
+modulate = Color( 1, 0.890196, 0, 1 )
+margin_right = 207.0
+margin_bottom = 14.0
+text = "           error empty slot"
+
+[node name="explanation" type="Label" parent="empty slot/VBoxContainer"]
+margin_top = 18.0
+margin_right = 207.0
+margin_bottom = 66.0
+text = "the save you selected 
+was tagged as an empty
+ slot please try again"
+
+[node name="close warning" type="Button" parent="empty slot/VBoxContainer"]
+margin_top = 70.0
+margin_right = 207.0
+margin_bottom = 90.0
+text = "close"
+
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="VBoxContainer/save 1" to="." method="_on_save_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/save 2" to="." method="_on_save_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/save 3" to="." method="_on_save_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/save 4" to="." method="_on_save_4_pressed"]
 [connection signal="pressed" from="VBoxContainer/save 5" to="." method="_on_save_5_pressed"]
+[connection signal="pressed" from="empty slot/VBoxContainer/close warning" to="." method="_on_close_warning_pressed"]
