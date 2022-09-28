@@ -14,6 +14,7 @@ func _on_done_pressed():
 	}
 	SaveFiles.save_data() 
 	
+	#issue here
 	SaveFiles.load_names()
 	if current == "user://save_1.save":
 		names["1"] = $TextEdit.text
