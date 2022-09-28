@@ -128,14 +128,9 @@ margin_right = 143.0
 margin_bottom = 73.0
 text = "ok"
 
-[node name="Button" type="Button" parent="."]
-margin_right = 12.0
-margin_bottom = 20.0
-
 [connection signal="pressed" from="VBoxContainer/continue" to="continue" method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/new game" to="new game" method="_on_new_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/load game" to="load" method="_on_load_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="options" method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="continue/VBoxContainer/close" to="continue" method="_on_close_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

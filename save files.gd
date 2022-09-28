@@ -12,14 +12,10 @@ var game_data = {
 }
 
 var names = {
-	"1" : "slot 1",
-	"2" : "slot 2",
-	"3" : "slot 3",
-	"4" : "slot 4",
-	"5" : "slot 5",
 }
 
 func _ready():
+	load_names()
 	load_current()
 
 
@@ -85,5 +81,5 @@ func load_names():
 		}
 		save_names()
 	file.open(nameplace, File.READ)
-	current = file.get_var()
+	names = file.get_var()
 	file.close()

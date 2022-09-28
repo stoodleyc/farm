@@ -33,10 +33,8 @@ func _physics_process(delta):
 	
 	#vertical movement
 	if Input.is_action_pressed("move up"):
-		print("up")
 		velocity.y = -walk
 	elif Input.is_action_pressed("move down"):
-		print("down")
 		velocity.y = walk
 	else:
 		velocity.y = 0
@@ -44,10 +42,8 @@ func _physics_process(delta):
 	
 	#horisontal movement
 	if Input.is_action_pressed("move left"):
-		print("left")
 		velocity.x = -walk
 	elif Input.is_action_pressed("move right"):
-		print("right")
 		velocity.x = walk
 	else:
 		velocity.x = 0

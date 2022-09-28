@@ -14,3 +14,8 @@ func _ready():
 				player.position.x = data.playerx
 				player.position.y = data.playery
 				SaveFiles.enter = data.area
+
+
+func _on_load_pressed():
+	player.position.y = data.playery
+	player.position.x = data.playerx

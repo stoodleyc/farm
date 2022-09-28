@@ -1,15 +1,15 @@
 extends PopupPanel
 
 
-
+onready var names = SaveFiles.names
 
 func _on_load_game_pressed():
 	SaveFiles.load_names()
-	$"VBoxContainer/save 1".text = SaveFiles.names["1"]
-	$"VBoxContainer/save 2".text = SaveFiles.names["2"]
-	$"VBoxContainer/save 3".text = SaveFiles.names["3"]
-	$"VBoxContainer/save 4".text = SaveFiles.names["4"]
-	$"VBoxContainer/save 5".text = SaveFiles.names["5"]
+	$"VBoxContainer/save 1".text = names["1"]
+	$"VBoxContainer/save 2".text = names["2"]
+	$"VBoxContainer/save 3".text = names["3"]
+	$"VBoxContainer/save 4".text = names["4"]
+	$"VBoxContainer/save 5".text = names["5"]
 	visible = true
 
 
