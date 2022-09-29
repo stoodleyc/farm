@@ -21,7 +21,7 @@ position = Vector2( 21, 41.7575 )
 scale = Vector2( 0.11976, 0.11976 )
 texture = ExtResource( 1 )
 
-[node name="talk" type="PopupDialog" parent="."]
+[node name="talk" type="PopupPanel" parent="."]
 visible = true
 margin_left = 63.0
 margin_top = 15.0
