@@ -79,8 +79,10 @@ text = "quit"
 [node name="options" parent="." instance=ExtResource( 3 )]
 
 [node name="load" parent="." instance=ExtResource( 2 )]
+visible = true
 
 [node name="new game" parent="." instance=ExtResource( 4 )]
+visible = true
 margin_left = -79.0
 margin_top = -65.0
 margin_right = 89.0
