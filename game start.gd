@@ -28,7 +28,7 @@ func _on_done_pressed():
 			SaveFiles.names["4"] = $TextEdit.text
 		elif current == "user://save_5.save":
 			SaveFiles.names["5"] = $TextEdit.text
-			SaveFiles.save_names()
+		SaveFiles.save_names()
 		
 		get_tree().change_scene("res://farm.tscn");
 
