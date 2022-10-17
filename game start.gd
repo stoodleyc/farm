@@ -33,6 +33,6 @@ func _on_done_pressed():
 		get_tree().change_scene("res://farm.tscn");
 
 
-
+#closes 'bad name error' popup
 func _on_close_pressed():
 	$"bad name error".visible = false

@@ -79,7 +79,6 @@ text = "quit"
 [node name="options" parent="." instance=ExtResource( 3 )]
 
 [node name="load" parent="." instance=ExtResource( 2 )]
-visible = true
 
 [node name="new game" parent="." instance=ExtResource( 4 )]
 visible = true

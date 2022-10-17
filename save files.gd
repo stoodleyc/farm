@@ -4,13 +4,15 @@ var current = "0"
 
 var enter
 
+#where these thing will be saved
 const nameplace = "user://names.save"
 const save_continue = "user://continue.save"
 
-
+#this will store various data within the game
 var game_data = {
 }
 
+#this stores the names of each save
 var names = {
 }
 
@@ -20,13 +22,14 @@ func _ready():
 
 
 
-#save game
+#saves game_data in a text decument
 func save_data():
 	var file = File.new()
 	file.open(current,File.WRITE)
 	file.store_var(game_data)
 	file.close()
 
+#loads game_data 
 func load_data():
 	var file = File.new()
 	if not file.file_exists(current):
@@ -45,13 +48,15 @@ func load_data():
 
 
 
-#for continue button only
+#this saves the 'current' variable in a text document
 func save_current():
 	var file = File.new()
 	file.open(save_continue,File.WRITE)
 	file.store_var(current)
 	file.close()
 
+#this loads the 'current' varaible from it's text document if there
+#is no text document it creates a new one
 func load_current():
 	var file = File.new()
 	if not file.file_exists(save_continue):
