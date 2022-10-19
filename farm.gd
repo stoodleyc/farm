@@ -12,15 +12,25 @@ onready var data = SaveFiles.game_data
 # and sets the enter variable to farm, if not then it sets the player position
 #to the saved position and sets enter to the current area
 func _ready():
+	SaveFiles.game_data.area = "farm"
 	if SaveFiles.enter == "shop":
 		player.position = Vector2 (970,300)
 		SaveFiles.enter = "farm"
 	else:
-				player.position.x = data.playerx
-				player.position.y = data.playery
-				SaveFiles.enter = data.area
+		player.position.x = data.playerx
+		player.position.y = data.playery
+		SaveFiles.enter = "farm"
 
 #sets any data to the currently saved data when load is pressed 
 func _on_load_pressed():
-	player.position.y = data.playery
-	player.position.x = data.playerx
+	SaveFiles.enter = "0"
+	if data.area == "shop":
+		get_tree().change_scene("res://shops.tscn")
+	else:
+		get_tree().change_scene("res://farm.tscn")
+
+
+
+
+func _on_shopenter_body_entered(body):
+	get_tree().change_scene("res://shops.tscn")

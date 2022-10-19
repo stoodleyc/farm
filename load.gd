@@ -1,6 +1,6 @@
 extends PopupPanel
 
-
+onready var data = SaveFiles.game_data
 onready var names = SaveFiles.names
 
 func _on_load_game_pressed():
@@ -26,8 +26,11 @@ func _on_save_1_pressed():
 	else:
 		SaveFiles.current = "user://save_1.save"
 		SaveFiles.save_current()
-		get_tree().change_scene("res://farm.tscn")
-
+		SaveFiles.load_data()
+		if  data.area == "farm":
+			get_tree().change_scene("res://farm.tscn")
+		else:
+			get_tree().change_scene("res://shops.tscn")
 
 func _on_save_2_pressed():
 	if $"VBoxContainer/save 2".text == "slot 2":
@@ -35,7 +38,11 @@ func _on_save_2_pressed():
 	else:
 		SaveFiles.current = "user://save_2.save"
 		SaveFiles.save_current()
-		get_tree().change_scene("res://farm.tscn")
+		SaveFiles.load_data()
+		if  data.area == "farm":
+			get_tree().change_scene("res://farm.tscn")
+		else:
+			get_tree().change_scene("res://shops.tscn")
 
 func _on_save_3_pressed():
 	if $"VBoxContainer/save 3".text == "slot 3":
@@ -43,7 +50,11 @@ func _on_save_3_pressed():
 	else:
 		SaveFiles.current = "user://save_3.save"
 		SaveFiles.save_current()
-		get_tree().change_scene("res://farm.tscn")
+		SaveFiles.load_data()
+		if  data.area == "farm":
+			get_tree().change_scene("res://farm.tscn")
+		else:
+			get_tree().change_scene("res://shops.tscn")
 
 func _on_save_4_pressed():
 	if $"VBoxContainer/save 4".text == "slot 4":
@@ -51,7 +62,11 @@ func _on_save_4_pressed():
 	else:
 		SaveFiles.current = "user://save_4.save"
 		SaveFiles.save_current()
-		get_tree().change_scene("res://farm.tscn")
+		SaveFiles.load_data()
+		if  data.area == "farm":
+			get_tree().change_scene("res://farm.tscn")
+		else:
+			get_tree().change_scene("res://shops.tscn")
 
 func _on_save_5_pressed():
 	if $"VBoxContainer/save 5".text == "slot 5":
@@ -59,6 +74,10 @@ func _on_save_5_pressed():
 	else:
 		SaveFiles.current = "user://save_5.save"
 		SaveFiles.save_current()
-		get_tree().change_scene("res://farm.tscn")
+		SaveFiles.load_data()
+		if  data.area == "farm":
+			get_tree().change_scene("res://farm.tscn")
+		else:
+			get_tree().change_scene("res://shops.tscn")
 
 

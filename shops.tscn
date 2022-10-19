@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://sprites/shop tiles.png" type="Texture" id=1]
 [ext_resource path="res://pause.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://shops.gd" type="Script" id=4]
 
 [sub_resource type="TileSet" id=1]
 0/name = "shop tiles.png 0"
@@ -34,6 +35,7 @@ extents = Vector2( 520.5, 10.25 )
 extents = Vector2( 17.5, 310.5 )
 
 [node name="shops" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -79,5 +81,12 @@ __meta__ = {
 
 [node name="pause" parent="." instance=ExtResource( 2 )]
 pause_mode = 2
+
+[node name="farmenter" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="farmenter"]
+
+[connection signal="pressed" from="pause/pause vbox/load" to="." method="_on_load_pressed"]
+[connection signal="body_entered" from="farmenter" to="." method="_on_farmenter_body_entered"]
 
 [editable path="pause"]

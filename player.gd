@@ -9,9 +9,6 @@ var velocity = Vector2.ZERO
 export (int) var walk = 2.5
 
 
-func _ready():
-	hello.text = "hello my name is %s." %[game_data.player_name]
-
 
 
 func _on_save_pressed():
