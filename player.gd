@@ -5,7 +5,7 @@ var area
 
 #variables for movement
 var velocity = Vector2.ZERO
-export (int) var walk = 2.5
+export (int) var walk = 5
 
 
 
