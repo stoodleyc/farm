@@ -35,7 +35,7 @@ extents = Vector2( 520.5, 10.25 )
 extents = Vector2( 17.5, 310.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 11.5, 37 )
+extents = Vector2( 5.75, 48 )
 
 [node name="farm" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -59,7 +59,7 @@ __meta__ = {
 }
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 513, 308 )
+position = Vector2( 506, 308 )
 
 [node name="border" type="StaticBody2D" parent="."]
 __meta__ = {
@@ -100,7 +100,7 @@ pause_mode = 2
 [node name="shopenter" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="shopenter"]
-position = Vector2( 1012, 304 )
+position = Vector2( 1017.75, 304 )
 shape = SubResource( 4 )
 
 [connection signal="pressed" from="pause/pause vbox/save" to="player" method="_on_save_pressed"]

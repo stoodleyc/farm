@@ -12,9 +12,9 @@ onready var data = SaveFiles.game_data
 # and sets the enter variable to farm, if not then it sets the player position
 #to the saved position and sets enter to the current area
 func _ready():
-	SaveFiles.game_data.area = "farm"
+	player.area = "farm"
 	if SaveFiles.enter == "shop":
-		player.position = Vector2 (970,300)
+		player.position = Vector2 (967,257)
 		SaveFiles.enter = "farm"
 	else:
 		player.position.x = data.playerx

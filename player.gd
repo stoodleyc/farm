@@ -1,8 +1,7 @@
 extends KinematicBody2D
 
 onready var hello = $talk/Label
-onready var game_data = SaveFiles.game_data
-
+var area
 
 #variables for movement
 var velocity = Vector2.ZERO
@@ -12,6 +11,7 @@ export (int) var walk = 2.5
 
 
 func _on_save_pressed():
+	SaveFiles.game_data.area = area
 	SaveFiles.game_data.playerx = self.position.x
 	SaveFiles.game_data.playery = self.position.y
 	SaveFiles.save_data()
