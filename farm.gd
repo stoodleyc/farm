@@ -1,6 +1,6 @@
 extends Node2D
 
-#the variables shorten are just here to make the code more readable 
+#the variables shortened are just here to make the code more readable 
 onready var player = $player
 
 onready var data = SaveFiles.game_data

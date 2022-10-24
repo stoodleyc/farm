@@ -21,6 +21,6 @@ func _ready():
 
 
 
-
+#changes scene to farm when area entered
 func _on_farmenter_body_entered(body):
 	get_tree().change_scene("res://farm.tscn")

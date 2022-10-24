@@ -1,12 +1,14 @@
 extends Node
 
-var current = "0"
 
 var enter
 
 #where these thing will be saved
 const nameplace = "user://names.save"
 const save_continue = "user://continue.save"
+#this is kept blank by default
+var current = "0"
+
 
 #this will store various data within the game
 var game_data = {
@@ -29,7 +31,8 @@ func save_data():
 	file.store_var(game_data)
 	file.close()
 
-#loads game_data 
+#loads game_data if it can't find it then it creates a text document with
+#the default variables
 func load_data():
 	var file = File.new()
 	if not file.file_exists(current):
@@ -67,13 +70,14 @@ func load_current():
 	file.close()
 
 
-#for load names
+#Saves the names variable in a text document
 func save_names():
 	var file = File.new()
 	file.open(nameplace,File.WRITE)
 	file.store_var(names)
 	file.close()
-
+#this loads the 'names' varaible from it's text document if there
+#is no text document it creates a new one
 func load_names():
 	var file = File.new()
 	if not file.file_exists(nameplace):
